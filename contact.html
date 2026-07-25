@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — WardMark</title>
+<meta name="description" content="Get in touch with WardMark to open a DMCA takedown case or ask about pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#A9863A" stroke-width="4"/>
+        <circle cx="50" cy="50" r="36" fill="#A93226"/>
+        <text x="50" y="59" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="30" font-weight="700" fill="#E9EBE2">WM</text>
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#A9863A" stroke-width="1" stroke-dasharray="2 6"/>
+      </svg>
+      <span>
+        <span class="brand-name">WARD<em>MARK</em></span>
+        <span class="tagline">Digital Rights Enforcement</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a href="pricing.html" class="nav-cta">File a Case</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb">Home / Contact</div>
+    <h1>Open a line to the case desk.</h1>
+    <p class="lede">Send the infringing link and a short description. You'll get a reply with the filing route and next steps — usually within one business day.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Send your case details</h2>
+      <form id="contact-form" action="#" method="post">
+        <div class="field">
+          <label for="c-name">Full name</label>
+          <input type="text" id="c-name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="c-email">Email address</label>
+          <input type="email" id="c-email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="c-links">Infringing link(s)</label>
+          <textarea id="c-links" name="links" placeholder="Paste one URL per line"></textarea>
+        </div>
+        <div class="field">
+          <label for="c-message">Tell us what happened</label>
+          <textarea id="c-message" name="message" placeholder="Where is your original work published? When did you notice the copy?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Case Details</button>
+      </form>
+      <p style="font-size:.85rem; color:var(--ink-soft); margin-top:14px;">Prefer email directly? Write to <a href="mailto:cases@wardmark.example" style="color:var(--stamp);">cases@wardmark.example</a>.</p>
+    </div>
+
+    <div>
+      <h2>Direct lines</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="label">Email</span>
+          <a href="mailto:cases@wardmark.example">cases@wardmark.example</a>
+        </li>
+        <li>
+          <span class="label">WhatsApp</span>
+          <span>[Your WhatsApp Number]</span>
+        </li>
+        <li>
+          <span class="label">Fiverr</span>
+          <a href="#">[Your Fiverr Profile URL]</a>
+        </li>
+        <li>
+          <span class="label">Upwork</span>
+          <a href="#">[Your Upwork Profile URL]</a>
+        </li>
+        <li>
+          <span class="label">Response time</span>
+          <span>Within 1 business day</span>
+        </li>
+        <li>
+          <span class="label">Based in</span>
+          <span>Pakistan · Serving clients worldwide</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>WARDMARK</h4>
+        <p style="max-width:34ch;">Digital rights enforcement and DMCA takedown filing for creators, brands and agencies.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="#">Fiverr Profile — add your link</a></li>
+          <li><a href="#">Upwork Profile — add your link</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WardMark. All rights reserved.</span>
+      <span>Case filings follow 17 U.S.C. §512 (U.S. DMCA)</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Contact form has no backend yet — route submissions to email via mailto.
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('c-name').value.trim();
+    const email = document.getElementById('c-email').value.trim();
+    const links = document.getElementById('c-links').value.trim();
+    const message = document.getElementById('c-message').value.trim();
+    const subject = encodeURIComponent('New case inquiry — ' + name);
+    const body = encodeURIComponent(
+      'Name: ' + name + '\nEmail: ' + email + '\nLinks:\n' + links + '\n\nMessage:\n' + message
+    );
+    window.location.href = 'mailto:cases@wardmark.example?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>
